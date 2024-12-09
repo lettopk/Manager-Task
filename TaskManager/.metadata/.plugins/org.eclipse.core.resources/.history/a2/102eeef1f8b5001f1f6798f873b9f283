@@ -1,0 +1,18 @@
+@WebMvcTest(TaskController.class)
+public class TaskControllerTest {
+
+    @Autowired
+    private MockMvc mockMvc;
+
+    @MockBean
+    private TaskRepository taskRepository;
+
+    @Test
+    public void getTasks_ReturnsEmptyList() throws Exception {
+        when(taskRepository.findAll()).thenReturn(Collections.emptyList());
+
+        mockMvc.perform(get("/tasks"))
+                .andExpect(status().isOk())
+                .andExpect(content().json("[]"));
+    }
+}

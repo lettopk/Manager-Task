@@ -1,0 +1,4 @@
+package com.testTec.taskManager.repository;
+
+public interface TaskRepository extends JpaRepository<Task, Long> {
+}

@@ -1,0 +1,29 @@
+package com.testTec.taskManager.controller;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TaskControllerTest {
+
+	@Test
+	void testTaskController() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetAllTasks() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testCreateTask() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testDeleteTask() {
+		fail("Not yet implemented");
+	}
+
+}

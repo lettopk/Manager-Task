@@ -1,0 +1,5 @@
+package com.testTec.taskManager.model;
+
+public class Task {
+
+}

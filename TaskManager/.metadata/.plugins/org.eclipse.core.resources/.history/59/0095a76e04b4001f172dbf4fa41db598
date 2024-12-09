@@ -1,0 +1,26 @@
+@RestController
+@RequestMapping("/tasks")
+
+public class TaskController {
+	private final  TaskRepository taskRepository;
+	
+	public TaskController(TaskRepository taskRepository) {
+		this.taskRepository = taskRepository;
+	}
+	
+	@GetMapping
+	public List<Task> getTask(){
+		return taskRepository.findAll();
+	}
+	
+	@PostMapping
+	public Task createTask (@RequestBody Task task) {
+		return taskRepository.save(task);
+	}
+	
+	@DeleteMapping ("/{id}")
+	public ResponseEntity<void> deleteTask (@PathVariable Long id){
+		taskRepository.deleteById(id);
+		return ResponseEntity.noContent().bulid();
+	}
+}
